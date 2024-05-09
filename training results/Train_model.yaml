@@ -1,0 +1,414 @@
+backend: tensorflow
+class_name: Sequential
+config:
+  layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple
+      - null
+      - 60
+      - 1
+      dtype: float32
+      name: conv1d_input
+      ragged: false
+      sparse: false
+  - class_name: Conv1D
+    config:
+      activation: selu
+      activity_regularizer: null
+      batch_input_shape: !!python/tuple
+      - null
+      - 60
+      - 1
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 8
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 9
+      name: conv1d
+      padding: same
+      strides: !!python/tuple
+      - 1
+      trainable: true
+      use_bias: true
+  - class_name: Conv1D
+    config:
+      activation: selu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 16
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 9
+      name: conv1d_1
+      padding: same
+      strides: !!python/tuple
+      - 1
+      trainable: true
+      use_bias: true
+  - class_name: Conv1D
+    config:
+      activation: selu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 16
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 7
+      name: conv1d_2
+      padding: same
+      strides: !!python/tuple
+      - 1
+      trainable: true
+      use_bias: true
+  - class_name: Conv1D
+    config:
+      activation: selu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 32
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 7
+      name: conv1d_3
+      padding: same
+      strides: !!python/tuple
+      - 1
+      trainable: true
+      use_bias: true
+  - class_name: Conv1D
+    config:
+      activation: selu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 64
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 5
+      name: conv1d_4
+      padding: same
+      strides: !!python/tuple
+      - 1
+      trainable: true
+      use_bias: true
+  - class_name: Conv1D
+    config:
+      activation: selu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 32
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 5
+      name: conv1d_5
+      padding: same
+      strides: !!python/tuple
+      - 1
+      trainable: true
+      use_bias: true
+  - class_name: Conv1D
+    config:
+      activation: selu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 32
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 3
+      name: conv1d_6
+      padding: same
+      strides: !!python/tuple
+      - 1
+      trainable: true
+      use_bias: true
+  - class_name: Conv1D
+    config:
+      activation: selu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 16
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 3
+      name: conv1d_7
+      padding: same
+      strides: !!python/tuple
+      - 1
+      trainable: true
+      use_bias: true
+  - class_name: Bidirectional
+    config:
+      dtype: float32
+      layer:
+        class_name: LSTM
+        config:
+          activation: tanh
+          activity_regularizer: null
+          bias_constraint: null
+          bias_initializer:
+            class_name: Zeros
+            config: {}
+          bias_regularizer: null
+          dropout: 0.1
+          dtype: float32
+          go_backwards: false
+          implementation: 2
+          kernel_constraint: null
+          kernel_initializer:
+            class_name: GlorotUniform
+            config:
+              seed: null
+          kernel_regularizer: null
+          name: lstm
+          recurrent_activation: sigmoid
+          recurrent_constraint: null
+          recurrent_dropout: 0.0
+          recurrent_initializer:
+            class_name: Orthogonal
+            config:
+              gain: 1.0
+              seed: null
+          recurrent_regularizer: null
+          return_sequences: true
+          return_state: false
+          stateful: false
+          time_major: false
+          trainable: true
+          unit_forget_bias: true
+          units: 16
+          unroll: false
+          use_bias: true
+      merge_mode: concat
+      name: bidirectional
+      trainable: true
+  - class_name: Bidirectional
+    config:
+      dtype: float32
+      layer:
+        class_name: LSTM
+        config:
+          activation: tanh
+          activity_regularizer: null
+          bias_constraint: null
+          bias_initializer:
+            class_name: Zeros
+            config: {}
+          bias_regularizer: null
+          dropout: 0.1
+          dtype: float32
+          go_backwards: false
+          implementation: 2
+          kernel_constraint: null
+          kernel_initializer:
+            class_name: GlorotUniform
+            config:
+              seed: null
+          kernel_regularizer: null
+          name: lstm_1
+          recurrent_activation: sigmoid
+          recurrent_constraint: null
+          recurrent_dropout: 0.0
+          recurrent_initializer:
+            class_name: Orthogonal
+            config:
+              gain: 1.0
+              seed: null
+          recurrent_regularizer: null
+          return_sequences: true
+          return_state: false
+          stateful: false
+          time_major: false
+          trainable: true
+          unit_forget_bias: true
+          units: 32
+          unroll: false
+          use_bias: true
+      merge_mode: concat
+      name: bidirectional_1
+      trainable: true
+  - class_name: LSTM
+    config:
+      activation: tanh
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dropout: 0.0
+      dtype: float32
+      go_backwards: false
+      implementation: 2
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      name: lstm_2
+      recurrent_activation: sigmoid
+      recurrent_constraint: null
+      recurrent_dropout: 0.0
+      recurrent_initializer:
+        class_name: Orthogonal
+        config:
+          gain: 1.0
+          seed: null
+      recurrent_regularizer: null
+      return_sequences: true
+      return_state: false
+      stateful: false
+      time_major: false
+      trainable: true
+      unit_forget_bias: true
+      units: 8
+      unroll: false
+      use_bias: true
+  - class_name: Dropout
+    config:
+      dtype: float32
+      name: dropout
+      noise_shape: null
+      rate: 0.1
+      seed: null
+      trainable: true
+  - class_name: Flatten
+    config:
+      data_format: channels_last
+      dtype: float32
+      name: flatten
+      trainable: true
+  - class_name: Dense
+    config:
+      activation: linear
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dtype: float32
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      name: dense
+      trainable: true
+      units: 60
+      use_bias: true
+  name: sequential
+keras_version: 2.5.0
