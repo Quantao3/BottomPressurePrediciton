@@ -2,7 +2,10 @@
 Using CNN&amp;LSTM to predict ocean bottom pressure
 
 Main_CNN_LSTM_model.py is the model code.
+This code uses CNN and LSTM to predict one site's ocean bottom pressure with another one's.
+
 In dataset/, there are 8 files for model training. 
+
 The last one is train_test_val.h5. It has training, validation, test dataset. Because the 8 files will be seperated into training, validation, and test data before training, and it is different in every running, so I saved these training, validation, and test data.
 
 The 8 files have /train_X and /train_Y
